@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoboPass Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="video-container">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="background.mp4" type="video/mp4">
+            
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <div id="copyAlert" class="copy-alert">
+        <span class="icon">✓</span> SYSTEM MSG: PASS IS COPIED
+    </div>
+
+    <div class="glass-panel">
+        <header>
+            <h1>PASSWORD GENERATOR</h1>
+            <div class="status-line">SYSTEM STATUS: ONLINE</div>
+        </header>
+
+        <div class="display-container">
+            <span class="prompt">></span>
+            <input type="text" id="passwordDisplay" placeholder="INITIALIZING..." readonly>
+        </div>
+
+        <div class="controls-area">
+            
+            <div class="control-box">
+                <label>SEQUENCE LENGTH: <span id="lengthValue">4</span></label>
+                <input type="range" id="lengthSlider" min="4" max="32" value="4">
+            </div>
+
+            <div class="options-grid">
+                <label class="cyber-checkbox">
+                    <input type="checkbox" id="includeUppercase" checked>
+                    <span class="box"></span>
+                    UPPERCASE (A-Z)
+                </label>
+                <label class="cyber-checkbox">
+                    <input type="checkbox" id="includeLowercase" checked>
+                    <span class="box"></span>
+                    LOWERCASE (a-z) 
+                </label>
+                <label class="cyber-checkbox">
+                    <input type="checkbox" id="includeNumbers" checked>
+                    <span class="box"></span>
+                    NUMERICS (0-9)
+                </label>
+                <label class="cyber-checkbox">
+                    <input type="checkbox" id="includeSymbols" checked>
+                    <span class="box"></span>
+                    SPECIAL CHARACTERS (!@#$%..)
+                </label>
+            </div>
+        </div>
+
+        <button id="copyBtn" class="action-btn secondary-btn">COPY TO CLIPBOARD</button>
+        <button id="generateBtn" class="action-btn primary-btn">EXECUTE GENERATION</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
