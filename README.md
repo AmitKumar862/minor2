@@ -2,7 +2,7 @@
 
 A fast, secure, and modern password generator with one-click downloading.
 
-## 🚀 Live Demo
+## 🚀 Live Demo link - https://password-generator-gray-two.vercel.app
 
 
 ## ✨ Features
